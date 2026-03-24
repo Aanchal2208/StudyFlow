@@ -39,13 +39,13 @@ void displayExpenses(const vector<Expense>& expenses) {
     
     for (const auto& e : expenses) {
         cout << left << setw(8) << e.id 
-             << "$" << setw(14) << fixed << setprecision(2) << e.amount
+             << "Rs." << setw(14) << fixed << setprecision(2) << e.amount
              << setw(25) << e.category << "\n";
         total += e.amount;
     }
     
     cout << string(50, '-') << "\n";
-    cout << "Total: $" << fixed << setprecision(2) << total << "\n";
+    cout << "Total: Rs." << fixed << setprecision(2) << total << "\n";
 }
 
 // Merge Sort implementation
@@ -175,7 +175,7 @@ void expenseTrackerMenu(vector<Expense>& expenses) {
             case 3: sortExpenses(expenses); displayExpenses(expenses); break;
             case 4: {
                 double amt;
-                cout << "Enter amount to search: $";
+                cout << "Enter amount to search: Rs.";
                 cin >> amt;
                 sortExpenses(expenses);  // must be sorted for binary search
                 int idx = searchExpense(expenses, amt);
