@@ -12,7 +12,7 @@ void addExpense(vector<Expense>& expenses) {
     Expense e;
     e.id = nextExpenseId++;
     
-    cout << "Enter amount: $";
+    cout << "Enter amount: Rs.";
     cin >> e.amount;
     
     cout << "Enter category: ";
